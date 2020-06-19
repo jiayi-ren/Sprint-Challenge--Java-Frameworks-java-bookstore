@@ -60,15 +60,21 @@ public class ResourceServerConfig
                              "/users/**")
                 .hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.PUT,
-                             "/users/**")
+                        "/users/**")
                 .hasAnyRole("ADMIN")
                 .antMatchers("/users/**",
-                             "/useremails/**",
-                             "/oauth/revoke-token",
-                             "/logout")
+                        "/useremails/**",
+                        "/oauth/revoke-token",
+                        "/logout")
                 .authenticated()
                 .antMatchers("/roles/**")
                 .hasAnyRole("ADMIN")
+                .antMatchers("/books/**")
+                .authenticated()
+                .antMatchers("/authors/**")
+                .authenticated()
+                .antMatchers("/data/**")
+                .authenticated()
                 .and()
                 .exceptionHandling()
                 .accessDeniedHandler(new OAuth2AccessDeniedHandler());

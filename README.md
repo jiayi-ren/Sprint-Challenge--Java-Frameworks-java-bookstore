@@ -29,9 +29,22 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Can you explain exception handling in your application?
+
+	Exception can be handled manually if we know what might happen. For example, searched resource doesn't exist or request user is not authorized. A custom error class is created to be thrown when exception happens.
+
 2. Can you explain your user authentication flow?
+
+User requests login with credentials. If request credentials match with database, a token is sent back to the client side which can be passed on in header for future requests.
+
 3. Can you show me your unit tests and describe how they work?
+
+	For testing services, units can be as simple as "assertEquals(expected, actual)". We implement the tested method and find a unique value from that method to compare with our expected value.
+	For testing controllers, a test data need to be setup before. We use Mockmvc to create a mock web request and then use mock data to simulate HTTP requests. Finally, we compare the response data with expected data.
+
 4. Can you show how you deployed your application to a cloud service with a persistent database?
+
+	We can choose Postgresql as our RDMS for data persistence. Create a heroku app and add necessary environment variables. Then use maven heroku plugin to deploy onto heroku.
+
 
 ## Instructions
 
