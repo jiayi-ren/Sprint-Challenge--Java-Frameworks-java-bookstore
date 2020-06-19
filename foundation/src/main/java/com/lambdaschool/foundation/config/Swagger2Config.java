@@ -29,7 +29,7 @@ public class Swagger2Config
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors
-                              .basePackage("com.lambdaschool.usermodel"))
+                        .basePackage("com.lambdaschool.foundation"))
                 .paths(PathSelectors.regex("/.*"))
                 .build()
                 .useDefaultResponseMessages(false) // Allows only my exception responses

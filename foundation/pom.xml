@@ -112,7 +112,7 @@
     </dependencies>
 
     <build>
-        <finalName>jrmmba-foundation</finalName>
+        <finalName>jren-foundation-sprint</finalName>
 
         <plugins>
             <plugin>
